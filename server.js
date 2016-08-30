@@ -22,7 +22,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, "public")));
 
 // Rutas
-app.use("/api", require("./src/presenter/ejemploRouter"));
+app.use("/api", require("./src/presenter/prueba02Router"));
 
 // Iniciar Servidor
 app.listen(port)
