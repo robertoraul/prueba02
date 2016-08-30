@@ -6,12 +6,13 @@ var morgan = require("morgan");
 var path = require("path");
 var cors = require("cors");
 var config = require("./config");
-var sequelize = require("sequelize")
+var sequelize = require("sequelize");
 var app = express();
+var conexion = require('./config');
 
 // Configuraciones
 var port = 3000;
-mongoose.connect(config.database);
+// conexion.connect(config.database);
 app.use(cors());
 app.use(morgan("dev"));
 app.use(bodyParser.json());
@@ -21,7 +22,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 app.use(express.static(path.join(__dirname, "public")));
 
 // Rutas
-app.use("/api", require("./src/presenter/proyectoRouter"));
+app.use("/api", require("./src/presenter/ejemploRouter"));
 
 // Iniciar Servidor
 app.listen(port)

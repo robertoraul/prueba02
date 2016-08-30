@@ -7,7 +7,7 @@ var express = require('express');
 var router = express.Router();
 
 // Casos de uso
-var casoUso = require("../application/casoUso");
+var casoUso = require("../aplication/ejemplo");
 
 // Crear Ruta
 router.get("/ejemplo", function(rec, res){
